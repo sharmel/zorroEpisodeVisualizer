@@ -11,7 +11,7 @@
 
 d3.json("zorroEpisodes.json", function (data) {
 
-var canvas = d3.select("body").append("svg")
+var canvas = d3.select("#body").append("svg")
 			.attr("width",300)
 			.attr("height",300)
 
@@ -23,11 +23,11 @@ var canvas = d3.select("body").append("svg")
 			.attr("width", function (d) {return d.Duration * 10;})
 			.attr("height", 50)
 			.attr("y", function (d, i) {return i * 50;})
-			.attr("fill", "blue")
+			.style("fill", "blue")
 
 			//print the value of timestamp to the console
-	// var map = data.map(function (i) {return i.Timestamp; })
-	// console.log(map);
+	 var map = data.map(function (i) {return i.Timestamp; })
+	 console.log(map);
 })
 </script>
 </body>
