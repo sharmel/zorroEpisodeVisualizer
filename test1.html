@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="utf-8" http-equiv="encoding">
+	<script src="d3.js"></script>
+	<title>zorro Visualisation</title>
+</head>
+<body>
+	<script>
+	var w = 4000;
+	var h = 3000;
+
+	var wScale= d3.scale.linear()
+				.domain([0, 1250])
+				.range([0, w]);
+
+		d3.json("zorroEpisodes1.json", function(err, data) {
+			if (!err){
+				var canvas = d3.select("body").append("svg")
+					.attr("width", w)
+					.attr("height",h)
+				var group = d3.append("g")
+					.attr("transform", "translate(150, 50)");
+				
+				canvas.selectAll("rect")
+					.data(data)
+					.enter()
+					.append("rect")
+					.attr("width", function (d) {return wScale(d.Duration)/50;})
+					.attr("height", 50)
+					.attr("y", function (d, i) {return i * 100;})
+
+				canvas.selectAll("text")
+						.data(data)
+						.enter()
+							.append("text")
+							.attr("y", function (d, i) {return i * 100;})
+							.attr("x", function (d, i) {return i - 75;})
+							.text(function (d) {return d.Action;});
+
+					//.style("fill", "blue")
+			//print the value of timestamp to the console
+			//data.map(function (i) {console.log(i.Timestamp)});
+		}
+		else{ console.log("something went wrong with your json file")}
+	});
+	</script>
+</body>
+</html>

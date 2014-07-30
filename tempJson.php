@@ -1,6 +1,6 @@
 <?php
 
-$homepage = file_get_contents('http://localhost:8888/besouro2/zJson.php');
+$homepage = file_get_contents('http://localhost:8888/zorroEpisodeVisualizer/zJson.php');
 echo $homepage;
 
 if(file_exists('zorroEpisodes.json')){ 
