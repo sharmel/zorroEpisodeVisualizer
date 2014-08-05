@@ -20,7 +20,11 @@ sort($contents);
         	echo "[";
         	foreach ($contents as $number => $line){
         		$content = explode(" ", $line);
+
 print "\n";
+if ($number !=0){
+echo ",";
+}
 echo "{";
 		print "\n";
         echo '"Timestamp": ';
@@ -47,7 +51,7 @@ echo "{";
 		print($content[4]);
 		//print "\n";
 echo "}";
-echo ",";
+
 //print "\n";
         	}
         	print "\n";

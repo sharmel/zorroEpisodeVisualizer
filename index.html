@@ -20,7 +20,7 @@
 				.domain([0, 1250])
 				.range([0, w]);
 
-		d3.json("zorroEpisodes1.json", function(err, data) {
+		d3.json("zorroEpisodes.json", function(err, data) {
 			if (!err){
 				var canvas = d3.select("body").append("svg")
 					.attr("width", w)
@@ -46,7 +46,7 @@
 							.append("g")
 							.attr("class", "arc")
 				//add event to the path
-							.on("click", function(d){ alert(d.data.Timestamp); });
+							.on("click", function(d){ alert(d.data.Timestamp +' '+ d.data.Subtype + ' ' + d.data.Flag); });
 
 							//append text to the path
 				//arcs.append("text")
