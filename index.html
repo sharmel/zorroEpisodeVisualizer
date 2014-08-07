@@ -46,7 +46,21 @@
 							.append("g")
 							.attr("class", "arc")
 				//add event to the path
-							.on("click", function(d){ alert(d.data.Timestamp +' '+ d.data.Subtype + ' ' + d.data.Flag); });
+							.on("click", function(d){ 
+
+								//alert(d.data.Timestamp +' '+ d.data.Subtype + ' ' + d.data.Flag); 
+
+					group.selectAll("text")
+						.data(pie(data))
+						.enter()
+							.append("text")
+							
+							
+							.attr("y", function (d, i) {return i * 100;})
+						.attr("x", function (d, i) {return i + 60;})
+							.text(function (d,i) {return d.data.Action +' '+d.data.Timestamp;});
+
+							});
 
 							//append text to the path
 				//arcs.append("text")
