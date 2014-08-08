@@ -13,8 +13,7 @@
 	var oRadius = 100;
 	var iRadius = 0;
 
-	var colour =d3.scale.ordinal()
-				.range(["blue", "red", "green"]);
+	var colour = d3.scale.category20c();
 
 	var wScale= d3.scale.linear()
 				.domain([0, 1250])
@@ -40,41 +39,22 @@
 							.value(function(d){return d.Duration;});
 
 				//bind the data to the document, but the data goes into pie layout first
-				var arcs = group.selectAll(".arc")
+				var arcs = group.selectAll(".arcs")
 							.data(pie(data))
 							.enter()
 							.append("g")
 							.attr("class", "arc")
 				//add event to the path
-							.on("click", function(d){ 
-
-								//alert(d.data.Timestamp +' '+ d.data.Subtype + ' ' + d.data.Flag); 
-
-					group.selectAll("text")
-						.data(pie(data))
-						.enter()
-							.append("text")
-							
-							
-							.attr("y", function (d, i) {return i * 100;})
-						.attr("x", function (d, i) {return i + 60;})
-							.text(function (d,i) {return d.data.Action +' '+d.data.Timestamp;});
-
-							});
-
-							//append text to the path
-				//arcs.append("text")
-					//.attr("transform", function(d){return "translate(" + arc.centroid(d) + ")"; })
-					//.attr("text-anchor", "middle" )
-					//.attr("font-size", "1em")
-					//.text(function(d){return d.data.Action});
-
+							.on("click", function(d,i){
+								d3.select(this).append("text")
+								.attr("transform", function(d){return "translate(" + arc.centroid(d) + ")"; })
+								.attr("text-anchor", "middle")
+								.attr("font-size", "1em")
+								.text(function(d){return d.data.Action});
+					 		});
 				arcs.append("path")
 					.attr("d", arc)
 					.attr("fill", function(d){return colour(d.data.Duration); });
-					
-				
-
 		}
 		else{ console.log("something went wrong with your json file")}
 	});
