@@ -46,6 +46,7 @@
 							.attr("class", "arc")
 				//add event to the path
 							.on("click", function(d,i){
+								document.getElementById('hello').innerHTML = d.data.Timestamp;
 								d3.select(this).append("text")
 								.attr("transform", function(d){return "translate(" + arc.centroid(d) + ")"; })
 								.attr("text-anchor", "middle")
@@ -59,5 +60,7 @@
 		else{ console.log("something went wrong with your json file")}
 	});
 	</script>
+
+	<div id='hello'>This will be replaced by the timestamp</div>
 </body>
 </html>
