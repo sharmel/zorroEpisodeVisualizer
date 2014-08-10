@@ -8,22 +8,53 @@
 </head>
 <body>
 	<script>
-		d3.json("zorroEpisodes1.json", function(err, data) {
+	var w = 1500;
+	var h = 1500;
+	var oRadius = 100;
+	var iRadius = 0;
+
+	var colour = d3.scale.category20c();
+
+	var wScale= d3.scale.linear()
+				.domain([0, 1250])
+				.range([0, w]);
+
+		d3.json("zorroEpisodes.json", function(err, data) {
 			if (!err){
 				var canvas = d3.select("body").append("svg")
-					.attr("width",300)
-					.attr("height",300)
-				
-				canvas.selectAll("rect")
-					.data(data)
-					.enter()
-					.append("rect")
-					.attr("width", function (d) {return d.Duration * 10;})
-					.attr("height", 50)
-					.attr("y", function (d, i) {return i * 50;})
-					.style("fill", "blue")
-			//print the value of timestamp to the console
-			data.map(function (i) {console.log(i.Timestamp)});
+					.attr("width", w)
+					.attr("height",h);
+
+					//group the canvas elements
+				var group = canvas.append("g")
+					.attr("transform", "translate(300, 300)");
+
+					//draw an arc
+				var arc = d3.svg.arc()
+							.innerRadius(iRadius)
+							.outerRadius(oRadius);
+
+				//draw a pie layout
+				var pie = d3.layout.pie()
+							.value(function(d){return d.Duration;});
+
+				//bind the data to the document, but the data goes into pie layout first
+				var arcs = group.selectAll(".arcs")
+							.data(pie(data))
+							.enter()
+							.append("g")
+							.attr("class", "arc")
+				//add event to the path
+							.on("click", function(d,i){
+								d3.select(this).append("text")
+								.attr("transform", function(d){return "translate(" + arc.centroid(d) + ")"; })
+								.attr("text-anchor", "middle")
+								.attr("font-size", "1em")
+								.text(function(d){return d.data.Action});
+					 		});
+				arcs.append("path")
+					.attr("d", arc)
+					.attr("fill", function(d){return colour(d.data.Duration); });
 		}
 		else{ console.log("something went wrong with your json file")}
 	});
