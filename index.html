@@ -4,6 +4,9 @@
 	<meta charset="UTF-8">
 	<meta content="utf-8" http-equiv="encoding">
 	<script src="d3.js"></script>
+	<link rel="stylesheet" href="css/zorroEpisodes.css" type="text/css" media="screen" title="no title" charset="utf-8">
+
+
 	<title>zorro Visualisation</title>
 </head>
 <body>
@@ -46,11 +49,14 @@
 							.attr("class", "arc")
 				//add event to the path
 							.on("click", function(d,i){
-								d3.select(this).append("text")
-								.attr("transform", function(d){return "translate(" + arc.centroid(d) + ")"; })
-								.attr("text-anchor", "middle")
-								.attr("font-size", "1em")
-								.text(function(d){return d.data.Action});
+								document.getElementById('hello').innerHTML = new Date(d.data.Timestamp);
+								document.getElementById('action').innerHTML = d.data.Action;
+								document.getElementById('subtype').innerHTML = d.data.Subtype;
+								// d3.select(this).append("text")
+								// .attr("transform", function(d){return "translate(" + arc.centroid(d) + ")"; })
+								// .attr("text-anchor", "middle")
+								// .attr("font-size", "1em")
+								// .text(function(d){return d.data.Action});
 					 		});
 				arcs.append("path")
 					.attr("d", arc)
@@ -59,5 +65,9 @@
 		else{ console.log("something went wrong with your json file")}
 	});
 	</script>
+<br>
+	<div id='hello'></div>
+	<div id='action'></div>
+	<div id='subtype'></div>
 </body>
 </html>
