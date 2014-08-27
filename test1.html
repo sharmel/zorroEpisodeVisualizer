@@ -3,7 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta content="utf-8" http-equiv="encoding">
-	<script src="d3.js"></script>
+	<script src="js/d3.js"></script>
+	<script src="d3.legend.js"></script>
 	<title>zorro Visualisation</title>
 </head>
 <body>
@@ -15,7 +16,7 @@
 				.domain([0, 1250])
 				.range([0, w]);
 
-		d3.json("zorroEpisodes1.json", function(err, data) {
+		d3.json("zorroEpisodes.json", function(err, data) {
 			if (!err){
 				var canvas = d3.select("body").append("svg")
 					.attr("width", w)
@@ -37,7 +38,7 @@
 							.append("text")
 							.attr("y", function (d, i) {return i * 100;})
 							.attr("x", function (d, i) {return i - 75;})
-							.text(function (d) {return d.Action;});
+							.text(function (d) {return d.Action;})
 
 					//.style("fill", "blue")
 			//print the value of timestamp to the console
@@ -45,6 +46,75 @@
 		}
 		else{ console.log("something went wrong with your json file")}
 	});
+
+
+
+
+
+
+
+
+
+
+		      // Add title      
+					svg.append("svg:text")
+					       .attr("class", "title")
+					       .attr("x", 200)
+					       .attr("y", 200)
+					       .text("Besouro Log visualisation");
+
+
+					    // add legend   
+					var legend = svg.append("g")
+					      .attr("class", "legend")
+					      .attr("x", 50 - 65)
+					      .attr("y", 25)
+					      .attr("height", 100)
+					      .attr("width", 100);
+
+					legend.selectAll('g').data(data)
+					      .enter()
+					      .append('g')
+					      .each(function(d, i) {
+					      var g = d3.select(this);
+					      g.append("rect")
+					          .attr("x", 50 - 5)
+					          .attr("y", i*25)
+					          .attr("width", 10)
+					          .attr("height", 10)
+					          .style("fill", function(d){
+							if (d.Action == "regression") {
+								return mycolor[0];
+							}else if (d.Action == "refactoring") {
+								return mycolor[1];
+
+							}else if (d.Action == "test-addition") {
+								return mycolor[2];
+							}else{ return mycolor[3]; };
+						});
+					        
+					        g.append("text")
+					          .attr("x", 50 - 5)
+					          .attr("y", i * 25 + 8)
+					          .attr("height",30)
+					          .attr("width",100)
+					          .style("fill", function(d){
+							if (d.Action == "regression") {
+								return mycolor[0];
+							}else if (d.Action == "refactoring") {
+								return mycolor[1];
+
+							}else if (d.Action == "test-addition") {
+								return mycolor[2];
+							}else{ return mycolor[3]; };
+						})
+					          .text(function(d){
+
+					          	return d.File_name;
+					          })
+
+					      });
+
 	</script>
 </body>
 </html>

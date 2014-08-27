@@ -13,8 +13,6 @@ $indexCount = count($contents);
 //echo "<br>";
 sort($contents);
 
-
-//for($index=0; $index < $indexCount; $index++) {
         if ($contents){
 
         	echo "[";
@@ -49,10 +47,9 @@ echo "{";
 
 		echo '"Flag": ';
 		print($content[4]);
-		//print "\n";
+		
 echo "}";
 
-//print "\n";
         	}
         	print "\n";
         	echo "]";

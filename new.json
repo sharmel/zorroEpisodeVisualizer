@@ -1,0 +1,86 @@
+[
+{
+"Timestamp": 1385723524392, 
+"Action": "regression",
+"File_name": "Recommender.java",
+	"File_size": 7413
+
+}
+,{
+"Timestamp": 1385723915159, 
+"Action": "test-addition", 
+"File_name": "SmokeTest.java",
+	"File_size": 7504
+}
+,{
+"Timestamp": 1385724008786, 
+"Action": "test-addition",
+"File_name": "SmokeTest.java",
+	"File_size": 7644 
+
+}
+,{
+"Timestamp": 1385724019818, 
+"Action": "regression", 
+"File_name": "Recommender.java",
+	"File_size": 7644
+}
+,{
+"Timestamp": 1385724532695, 
+"Action": "test-addition",
+"File_name": "SmokeTest.java",
+	"File_size": 7644 
+
+}
+,{
+"Timestamp": 1385724699934, 
+"Action": "test-addition", 
+"File_name": "SmokeTest.java",
+	"File_size": 7835
+}
+,{
+"Timestamp": 1385724887513, 
+"Action": "test-addition", 
+"File_name": "SmokeTest.java",
+	"File_size": 8697
+
+}
+,{
+"Timestamp": 1385725246062, 
+"Action": "test-addition", 
+"File_name": "SmokeTest.java",
+	"File_size": 9368
+}
+,{
+"Timestamp": 1385725330987, 
+"Action": "refactoring", 
+"File_name": "SmokeTest.java",
+	"File_size": 9394
+}
+,{
+"Timestamp": 1385725361816, 
+"Action": "refactoring",
+"File_name": "Recommender.java",
+	"File_size": 9713 
+}
+,{
+"Timestamp": 1385726595514, 
+"Action": "test-first", 
+"File_name": "SmokeTest.java",
+"File_size": 10308
+	
+}
+,{
+"Timestamp": 1385726718667, 
+"Action": "refactoring", 
+"File_name": "SmokeTest.java",
+	"File_size": 10308
+}
+,{
+"Timestamp": 1385726855824, 
+"Action": "refactoring", 
+"File_name": "Recommender.java",
+	"File_size": 10308
+
+}
+]
