@@ -2,15 +2,34 @@
 {
 "Timestamp": 1385723524392, 
 "Action": "regression", 
-"Files":[
+"Actions":[
 {
+	"Action": "FileOpenedAction",
+	"Timestamp": 1385723481486,
 	"File_name": "Recommender.java",
 	"File_size": 5898
-	},
-	{
+},
+{
+	
+	"Action": "EditAction",
+	"Timestamp": 1385723520627,
 	"File_name": "SmokeTest.java",
 	"File_size": 7413
-	}
+},
+{
+	
+	"Action": "UnitTestCaseAction",
+	"Timestamp": 1385723524377,
+	"File_name": "SmokeTest.java",
+	"File_size": 7413
+},
+{
+	
+	"Action": "UnitTestSessionAction",
+	"Timestamp": 1385723524392,
+	"File_name": "SmokeTest",
+	"File_size": 7413
+}
 
 ]
 
@@ -18,139 +37,479 @@
 ,{
 "Timestamp": 1385723915159, 
 "Action": "test-addition", 
-"Files":[
-	{
+
+"Actions":[
+{
+	"Action": "EditAction",
+	"Timestamp": 1385723753705,
 	"File_name": "SmokeTest.java",
 	"File_size": 7504
-	}
+},
+{
+	
+	"Action": "UnitTestCaseAction",
+	"Timestamp": 1385723520627,
+	"File_name": "SmokeTest.java",
+	"File_size": 7413
+
+},
+{
+	
+	"Action": "UnitTestSessionAction",
+	"Timestamp": 1385723787642,
+	"File_name": "SmokeTest",
+	"File_size": 7413
+},
+{
+	
+	"Action": "UnitTestCaseAction",
+	"Timestamp": 1385723915159,
+	"File_name": "SmokeTest.java",
+	"File_size": 7413
+},
+{
+	
+	"Action": "UnitTestSessionAction",
+	"Timestamp": 1385723915159,
+	"File_name": "MusicPhoneTask",
+	"File_size": 7413
+}
+
 
 ]
 }
 ,{
 "Timestamp": 1385724008786, 
 "Action": "test-addition", 
-"Files":[
-	{
+
+"Actions":[
+{
+	"Action": "EditAction",
+	"Timestamp": 1385724002003,
 	"File_name": "SmokeTest.java",
 	"File_size": 7644
-	}
+},
+{
+	
+	"Action": "UnitTestCaseAction",
+	"Timestamp": 1385724008786,
+	"File_name": "SmokeTest.java",
+	"File_size": 7644
+
+},
+{
+	
+	"Action": "UnitTestSessionAction",
+	"Timestamp": 1385724008786,
+	"File_name": "SmokeTest",
+	"File_size": 7644
+}
 
 ]
-}
-,{
+},
+{
 "Timestamp": 1385724019818, 
 "Action": "regression", 
-"Files":[
+
+"Actions":[
+
 {
+	
+	"Action": "UnitTestCaseAction",
+	"Timestamp": 1385724019818,
 	"File_name": "SmokeTest.java",
 	"File_size": 7644
-	}
+
+},
+{
+	
+	"Action": "UnitTestSessionAction",
+	"Timestamp": 1385724019818,
+	"File_name": "SmokeTest",
+	"File_size": 7644
+}
 
 ]
-}
-,{
+},
+{
 "Timestamp": 1385724532695, 
 "Action": "test-addition", 
-"Files":[
+
+"Actions":[
 {
+	
+	"Action": "EditAction",
+	"Timestamp": 1385724228632,
 	"File_name": "SmokeTest.java",
-	"File_size": 7644
-	}
+	"File_size": 7681
+},
+{
+	
+	"Action": "UnitTestCaseAction",
+	"Timestamp": 1385724239866,
+	"File_name": "SmokeTest.java",
+	"File_size": 7681
+},
+{
+	
+	"Action": "UnitTestSessionAction",
+	"Timestamp": 1385724239866,
+	"File_name": "SmokeTest.java",
+	"File_size": 7681
+},
+{
+	"Action": "RefactoringAction",
+	"Timestamp": 1385724275085,
+	"File_name": "Recommender.java",
+	"File_size": 9898
+},
+{
+	"Action": "RefactoringAction",
+	"Timestamp": 1385724304163,
+	"File_name": "Recommender.java",
+	"File_size": 9898
+},
+{
+	"Action": "RefactoringAction",
+	"Timestamp": 1385724353975,
+	"File_name": "Recommender.java",
+	"File_size": 9898
+},
+{
+	
+	"Action": "UnitTestCaseAction",
+	"Timestamp": 1385724417038,
+	"File_name": "SmokeTest.java",
+	"File_size": 7681
+},
+{
+	
+	"Action": "UnitTestSessionAction",
+	"Timestamp": 1385724417038,
+	"File_name": "SmokeTest",
+	"File_size": 7681
+},
+{
+	
+	"Action": "UnitTestCaseAction",
+	"Timestamp": 1385724532695,
+	"File_name": "SmokeTest.java",
+	"File_size": 7681
+},
+{
+	
+	"Action": "UnitTestSessionAction",
+	"Timestamp": 1385724532695,
+	"File_name": "MusicPhoneTask",
+	"File_size": 7681
+}
 
 ]
 }
 ,{
 "Timestamp": 1385724699934, 
 "Action": "test-addition", 
-"Files":[
 
-	{
+"Actions":[
+{
+	"Action": "RefactoringAction",
+	"Timestamp": 1385724353975,
+	"File_name": "SmokeTest.java",
+	"File_size": 7681
+},
+{
+	
+	"Action": "EditAction",
+	"Timestamp": 1385724642445,
 	"File_name": "SmokeTest.java",
 	"File_size": 7835
-	}
+},
+{
+	
+	"Action": "UnitTestCaseAction",
+	"Timestamp": 1385724649104,
+	"File_name": "SmokeTest.java",
+	"File_size": 7835
+},
+{
+	
+	"Action": "UnitTestSessionAction",
+	"Timestamp": 1385724649104,
+	"File_name": "SmokeTest",
+	"File_size": 7835
+},
+{
+	
+	"Action": "UnitTestCaseAction",
+	"Timestamp": 1385724699934,
+	"File_name": "SmokeTest.java",
+	"File_size": 7835
+},
+{
+	
+	"Action": "UnitTestSessionAction",
+	"Timestamp": 1385724699934,
+	"File_name": "MusicPhoneTask",
+	"File_size": 7835
+}
 
 ] 
 }
 ,{
 "Timestamp": 1385724887513, 
 "Action": "test-addition", 
-"Files":[
-	{
+
+"Actions":[
+{
+	"Action": "RefactoringAction",
+	"Timestamp": 1385724718481,
+	"File_name": "SmokeTest.java",
+	"File_size": 7681
+},
+{
+	"Action": "RefactoringAction",
+	"Timestamp": 1385724724544,
+	"File_name": "SmokeTest.java",
+	"File_size": 7681
+},
+{
+	
+	"Action": "EditAction",
+	"Timestamp": 1385724739075,
 	"File_name": "SmokeTest.java",
 	"File_size": 8697
-	}
+},
+{
+	
+	"Action": "UnitTestCaseAction",
+	"Timestamp": 1385724751325,
+	"File_name": "SmokeTest.java",
+	"File_size": 8697
+},
+{
+	
+	"Action": "UnitTestSessionAction",
+	"Timestamp": 1385724751325,
+	"File_name": "SmokeTest",
+	"File_size": 8697
+},
+{
+	"Action": "RefactoringAction",
+	"Timestamp": 1385724858356,
+	"File_name": "Recommender.java",
+	"File_size": 7681
+},
+{
+	
+	"Action": "UnitTestCaseAction",
+	"Timestamp": 1385724887513,
+	"File_name": "SmokeTest.java",
+	"File_size": 7835
+},
+{
+	
+	"Action": "UnitTestSessionAction",
+	"Timestamp": 1385724887513,
+	"File_name": "MusicPhoneTask",
+	"File_size": 7835
+}
 
 ] 
 }
 ,{
 "Timestamp": 1385725246062, 
 "Action": "test-addition", 
-"Files":[
-	{
+
+"Actions":[
+{
+	
+	"Action": "EditAction",
+	"Timestamp": 1385725205234,
 	"File_name": "SmokeTest.java",
 	"File_size": 9368
-	}
+},
+{
+	
+	"Action": "CompilationAction",
+	"Timestamp": 1385725208109,
+	"File_name": "SmokeTest.java",
+	"File_size": 9368
+},
+{
+	
+	"Action": "UnitTestCaseAction",
+	"Timestamp": 1385725246062,
+	"File_name": "SmokeTest.java",
+	"File_size": 9368
+},
+{
+	
+	"Action": "UnitTestSessionAction",
+	"Timestamp": 1385723524392,
+	"File_name": "SmokeTest",
+	"File_size": 7413
+}
 
 ] 
 }
 ,{
 "Timestamp": 1385725330987, 
 "Action": "refactoring", 
-"Files":[
-	{
+
+"Actions":[
+{
+	"Action": "FileOpenedAction",
+	"Timestamp": 1385723481486,
+	"File_name": "Recommender.java",
+	"File_size": 5898
+},
+{
+	
+	"Action": "EditAction",
+	"Timestamp": 1385723520627,
 	"File_name": "SmokeTest.java",
-	"File_size": 9394
-	}
+	"File_size": 7413
+},
+{
+	
+	"Action": "UnitTestCaseAction",
+	"Timestamp": 1385723524377,
+	"File_name": "SmokeTest.java",
+	"File_size": 7413
+},
+{
+	
+	"Action": "UnitTestSessionAction",
+	"Timestamp": 1385723524392,
+	"File_name": "SmokeTest.java",
+	"File_size": 7413
+}
 
 ] 
 }
 ,{
 "Timestamp": 1385725361816, 
 "Action": "refactoring", 
-"Files":[
-	{
+
+"Actions":[
+{
+	"Action": "FileOpenedAction",
+	"Timestamp": 1385723481486,
+	"File_name": "Recommender.java",
+	"File_size": 5898
+},
+{
+	
+	"Action": "EditAction",
+	"Timestamp": 1385723520627,
 	"File_name": "SmokeTest.java",
-	"File_size": 9713
-	}
+	"File_size": 7413
+},
+{
+	
+	"Action": "UnitTestCaseAction",
+	"Timestamp": 1385723524377,
+	"File_name": "SmokeTest.java",
+	"File_size": 7413
+},
+{
+	
+	"Action": "UnitTestSessionAction",
+	"Timestamp": 1385723524392,
+	"File_name": "SmokeTest.java",
+	"File_size": 7413
+}
 
 ] 
 }
 ,{
 "Timestamp": 1385726595514, 
 "Action": "test-first", 
-"Files":[
-// {
-// 	"File_name": "Recommender.java",
-// 	"File_size": 6787
-// 	},
-	{
+
+"Actions":[
+{
+	"Action": "FileOpenedAction",
+	"Timestamp": 1385723481486,
+	"File_name": "Recommender.java",
+	"File_size": 5898
+},
+{
+	
+	"Action": "EditAction",
+	"Timestamp": 1385723520627,
 	"File_name": "SmokeTest.java",
-	"File_size": 10308
-	}
+	"File_size": 7413
+},
+{
+	
+	"Action": "UnitTestCaseAction",
+	"Timestamp": 1385723524377,
+	"File_name": "SmokeTest.java",
+	"File_size": 7413
+},
+{
+	
+	"Action": "UnitTestSessionAction",
+	"Timestamp": 1385723524392,
+	"File_name": "SmokeTest.java",
+	"File_size": 7413
+}
 
 ] 
 }
 ,{
 "Timestamp": 1385726718667, 
 "Action": "refactoring", 
-"Files":[
 
-	{
+"Actions":[
+{
+	"Action": "RefactoringAction",
+	"Timestamp": 1385726688212,
 	"File_name": "SmokeTest.java",
-	"File_size": 10308
-	}
+	"File_size": 7898
+},
+{
+	
+	"Action": "UnitTestCaseAction",
+	"Timestamp": 1385726718667,
+	"File_name": "SmokeTest.java",
+	"File_size": 8413
+},
+{
+	
+	"Action": "UnitTestSessionAction",
+	"Timestamp": 1385726718667,
+	"File_name": "SmokeTest",
+	"File_size": 8413
+}
 
 ] 
 }
 ,{
 "Timestamp": 1385726855824, 
 "Action": "refactoring", 
-"Files":[
 
-	{
+"Actions":[
+{
+	"Action": "RefactoringAction",
+	"Timestamp": 1385726776558,
 	"File_name": "SmokeTest.java",
-	"File_size": 10308
-	}
+	"File_size": 9898
+},
+{
+	
+	"Action": "UnitTestCaseAction",
+	"Timestamp": 1385726855824,
+	"File_name": "SmokeTest.java",
+	"File_size": 10413
+},
+{
+	
+	"Action": "UnitTestSessionAction",
+	"Timestamp": 1385726855824,
+	"File_name": "SmokeTest",
+	"File_size": 7413
+}
 
 ] 
 }

@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="utf-8" http-equiv="encoding">
+	<script src="js/d3.js"></script>
+	<title>zorro Visualisation</title>
+	</head>
+<body>
+<script>
+
+
+			
+d3.json("more.json", function(err, data) {
+			if (!err){
+svg = d3.select(".sample").append("svg")
+  .attr("width", 500)
+  .attr("height", 600)
+  
+
+samples = svg.selectAll("g")
+    .data(data)
+  	.enter().append("g")
+    .attr("transform", function (d, i) { return "translate(0," + (i * 20) + ")"; })
+
+rects = samples.selectAll("rect")
+    .data(function (d) { return d.Actions; })
+  	.enter().append("rect")
+    .attr("height", function (d) { return d.File_size/100;})
+    .attr("width", 10)
+    .attr("x", function (d) { return d.File_size/100; })
+    .attr("y", function (d, i) { return i * 100; })
+    .attr("fill","blue");	
+
+				}
+
+		else{ console.log("something went wrong with the json file")}
+	});
+
+
+			
+	</script>
+
+	<div class="sample"></div>
+</body>
+</html>
