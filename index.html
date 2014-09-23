@@ -121,7 +121,40 @@
 				                .style('top',  (d3.event.pageY - 30) + 'px')
 
 				        })
-				        .on('mouseout', tooltip.hide)
+				bar.on("click", function(d,i){
+
+				d3.json("more.json", function(err, data){
+				        	if (!err) {
+
+
+			var info = d3.select("#moreInfo").append("svg")
+					.style('background', '#0B3B0B')
+					.attr("width", 300)
+					.attr("height", 200)
+					.data(data)
+  					.enter().append("g")
+        			.attr('transform', 'translate('+ 40 +', '+ 30 +')')
+					.selectAll('rect')
+					.data(function (d,i) { return d.Actions; })
+					.enter().append('rect')
+					.text(function(d,i)
+						{
+							//console.log( d.Timestamp);
+
+							/*for (var i = 0; i >= d.length; i++) {
+								return d.Action +" "+ d.File_name +" "+ d.File_size;
+							};*/
+							return d.Action +" "+ d.File_name +" "+ d.File_size;
+							
+						})
+
+				        		}
+							else{ console.log("no json file to read")}
+
+				        	})
+				        	//console.log( d.Timestamp);
+
+				        })
 				        
 
 					bar.transition()
@@ -219,10 +252,12 @@
 	});
 	</script>
 <br>
-	 <div id='info'>Roll over to see file size and file name</div>
+	 <div id='info'>Roll over to see file size and file name or click to view actions</div>
 	<div id='name'>Click on a pie to see file changes</div>
 	<div align="center" id='bar'></div>
+	<div align="center" id='moreInfo'></div>
 	<div align="center" id='duract'></div>
+	
 
 </body>
 </html>
